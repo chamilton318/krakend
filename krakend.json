@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "plugin": {
+    "pattern": ".so",
+    "folder": "/etc/krakend/plugins/"
+  },
+  "endpoints": [
+    {
+      "endpoint": "/ip",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/ip",
+          "host": [
+            "http://httpbin.org/"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/uuid",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/uuid",
+          "host": [
+            "http://httpbin.org/"
+          ]
+        }
+      ]
+    }
+  ]
+}
